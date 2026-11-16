@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimoni Wisatawan - Saphira Tour & Travel Bandung</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { primary: '#0284c7', primaryHover: '#0369a1', secondary: '#f97316', accent: '#14b8a6', dark: '#0f172a' },
+                    fontFamily: { sans: ['Inter', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="font-sans text-slate-800 bg-white antialiased flex flex-col min-h-screen">
+
+    <!-- HEADER / NAVIGATION -->
+    <header class="fixed top-0 left-0 w-full bg-white/90 backdrop-blur-md shadow-sm z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="index.html" class="flex items-center gap-3">
+                    <img src="1.png" alt="Saphira Tour Logo" class="w-10 h-10 object-contain rounded-xl shadow-md border border-slate-100" onerror="this.onerror=null; this.src='https://placehold.co/100x100/0284c7/ffffff?text=ST';">
+                    <div>
+                        <span class="text-xl font-extrabold tracking-tight text-slate-900 block leading-none">SAPHIRA</span>
+                        <span class="text-xs font-semibold text-primary uppercase tracking-widest block">Bandung Tour Specialist</span>
+                    </div>
+                </a>
+
+                <nav class="hidden md:flex items-center gap-6 font-medium text-slate-600 text-sm lg:text-base">
+                    <a href="index.html" class="hover:text-primary transition-colors py-2 border-b-2 border-transparent hover:border-primary">Beranda</a>
+                    <a href="paket-wisata.html" class="hover:text-primary transition-colors py-2 border-b-2 border-transparent hover:border-primary">Paket Wisata</a>
+                    <a href="keunggulan.html" class="hover:text-primary transition-colors py-2 border-b-2 border-transparent hover:border-primary">Keunggulan</a>
+                    <a href="dokumentasi.html" class="hover:text-primary transition-colors py-2 border-b-2 border-transparent hover:border-primary">Dokumentasi</a>
+                    <a href="testimoni.html" class="text-primary font-bold py-2 border-b-2 border-primary">Testimoni</a>
+                    <a href="reservasi.html" class="hover:text-primary transition-colors py-2 border-b-2 border-transparent hover:border-primary">Reservasi</a>
+                </nav>
+
+                <div class="hidden md:flex items-center gap-3">
+                    <a href="#" onclick="openDirectWA('Halo Saphira Tour, saya ingin bertanya mengenai paket wisata Bandung.')" class="inline-flex items-center gap-2 bg-emerald-500 hover:bg-emerald-600 text-white font-semibold px-4 py-2 rounded-full shadow-md text-sm">
+                        <i class="fa-brands fa-whatsapp text-base"></i><span>Chat Admin</span>
+                    </a>
+                </div>
+
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-slate-700 p-2"><i class="fa-solid fa-bars text-2xl" id="menu-icon"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-100 shadow-xl">
+            <div class="px-4 pt-2 pb-6 space-y-3 font-medium">
+                <a href="index.html" class="block px-3 py-2 rounded-lg hover:bg-slate-100">Beranda</a>
+                <a href="paket-wisata.html" class="block px-3 py-2 rounded-lg hover:bg-slate-100">Paket Wisata</a>
+                <a href="keunggulan.html" class="block px-3 py-2 rounded-lg hover:bg-slate-100">Keunggulan</a>
+                <a href="dokumentasi.html" class="block px-3 py-2 rounded-lg hover:bg-slate-100">Dokumentasi</a>
+                <a href="testimoni.html" class="block px-3 py-2 rounded-lg bg-primary/10 text-primary font-bold">Testimoni</a>
+                <a href="reservasi.html" class="block px-3 py-2 rounded-lg hover:bg-slate-100">Reservasi Form</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-1 pt-28 pb-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-primary font-bold uppercase tracking-wider text-sm">Kata Mereka</span>
+                <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2">Testimoni Wisatawan Saphira</h1>
+                <p class="text-slate-600 mt-4">Pengalaman asli dari wisatawan yang liburan ke Bandung bersama kami.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-slate-50 p-8 rounded-2xl shadow-sm border border-slate-200/80 flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-amber-400 mb-4 text-sm">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-slate-600 italic text-sm sm:text-base mb-6">
+                            "Ikut Lembang Open Trip Saphira Tour seru banget! Teman-teman baru asik, tour guide-nya ramah & bersertifikat, destinasi seperti Floating Market dan Orchid Forest bikin puas."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-4 border-t border-slate-200 pt-4">
+                        <img src="image/testi1.jpg" alt="Sarah" class="w-12 h-12 rounded-full object-cover" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=120&q=80';">
+                        <div>
+                            <h4 class="font-bold text-slate-900 text-sm">Sarah Rahmawati</h4>
+                            <p class="text-xs text-slate-500">Lembang Open Trip</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-slate-50 p-8 rounded-2xl shadow-sm border border-slate-200/80 flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-amber-400 mb-4 text-sm">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-slate-600 italic text-sm sm:text-base mb-6">
+                            "Private Trip Ciwidey untuk rombongan keluarga kami sangat memuaskan. Mobil AC dingin, jam fleksibel, dan driver tahu jalan pintas terbebas macet."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-4 border-t border-slate-200 pt-4">
+                        <img src="image/testi2.JPG" alt="Budi" class="w-12 h-12 rounded-full object-cover" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80';">
+                        <div>
+                            <h4 class="font-bold text-slate-900 text-sm">Budi Santoso</h4>
+                            <p class="text-xs text-slate-500">Ciwidey Private Trip</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-slate-50 p-8 rounded-2xl shadow-sm border border-slate-200/80 flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-amber-400 mb-4 text-sm">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-slate-600 italic text-sm sm:text-base mb-6">
+                            "Ciwidey Private Trip untuk honeymoon berdua luar biasa romantis! Pemandangan indah, dokumentasi foto dibantu tour guide. Hatur nuhun Saphira Tour!"
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-4 border-t border-slate-200 pt-4">
+                        <img src="image/testi3.jpg" alt="Dewi" class="w-12 h-12 rounded-full object-cover" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80';">
+                        <div>
+                            <h4 class="font-bold text-slate-900 text-sm">Dewi</h4>
+                            <p class="text-xs text-slate-500">Ciwidey Private Trip</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-950 text-slate-400 py-8 border-t border-slate-800 text-center text-xs">
+        <p>&copy; 2026 Saphira Tour and Travel. Hak Cipta Dilindungi Undang-Undang.</p>
+    </footer>
+
+    <a href="#" onclick="openDirectWA('Halo Saphira Tour, saya tertarik untuk konsultasi paket wisata Bandung.')" class="wa-float-btn fixed bottom-6 right-6 bg-emerald-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl z-50 hover:bg-emerald-600">
+        <i class="fa-brands fa-whatsapp text-3xl"></i>
+    </a>
+
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
